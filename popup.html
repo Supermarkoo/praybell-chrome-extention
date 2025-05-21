@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Athan Prayer Times</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="title">أوقات الصلاة</h1>
+            <div class="location-info">
+                <span id="city">جاري تحميل الموقع...</span>
+            </div>
+            <button id="settings-btn" class="icon-button">⚙️</button>
+        </div>
+
+        <div class="next-prayer-box">
+            <div class="next-prayer-info">
+                <span id="next-prayer-name">التالية</span>
+                <span id="next-prayer-time">--:--</span>
+            </div>
+            <div class="countdown" id="countdown">--:--:--</div>
+        </div>
+
+        <div class="prayer-times">
+            <div class="prayer-time">
+                <span class="prayer-name" data-en="Fajr">الفجر</span>
+                <span id="fajr-time" class="time">--:--</span>
+            </div>
+            <div class="prayer-time">
+                <span class="prayer-name" data-en="Sunrise">الشروق</span>
+                <span id="sunrise-time" class="time">--:--</span>
+            </div>
+            <div class="prayer-time">
+                <span class="prayer-name" data-en="Dhuhr">الظهر</span>
+                <span id="dhuhr-time" class="time">--:--</span>
+            </div>
+            <div class="prayer-time">
+                <span class="prayer-name" data-en="Asr">العصر</span>
+                <span id="asr-time" class="time">--:--</span>
+            </div>
+            <div class="prayer-time">
+                <span class="prayer-name" data-en="Maghrib">المغرب</span>
+                <span id="maghrib-time" class="time">--:--</span>
+            </div>
+            <div class="prayer-time">
+                <span class="prayer-name" data-en="Isha">العشاء</span>
+                <span id="isha-time" class="time">--:--</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="date-info">
+                <span id="date"></span>
+            </div>
+            <div class="founder">
+                By <a href="https://takrizim.com" target="_blank">Tamer Krizim</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Page -->
+    <div class="settings-page" id="settings-page">
+        <div class="settings-header">
+            <button id="close-settings" class="icon-button">←</button>
+            <h2 id="settings-title">Settings</h2>
+        </div>
+        
+        <div class="settings-content">
+            <div class="settings-section">
+                <label for="language-select">Language</label>
+                <select id="language-select" class="select-box">
+                    <option value="ar" selected>العربية</option>
+                    <option value="en">English</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="ur">اردو</option>
+                    <option value="fr">Français</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="fa">فارسی</option>
+                    <option value="bn">বাংলা</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="de">Deutsch</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+
+            <div class="settings-section">
+                <label for="country-select">Country</label>
+                <select id="country-select" class="select-box">
+                    <option value="JO" selected>الأردن</option>
+                </select>
+            </div>
+
+            <div class="settings-section">
+                <label for="city-select">City</label>
+                <select id="city-select" class="select-box">
+                    <option value="">اختر المدينة</option>
+                </select>
+            </div>
+
+            <div class="settings-section">
+                <button id="auto-location" class="location-button">
+                    <span class="icon">📍</span>
+                    <span class="text">Auto-detect location</span>
+                </button>
+            </div>
+
+            <div class="settings-section">
+                <button id="test-notification" class="test-button">
+                    <span class="icon">🔔</span>
+                    <span class="text">Test Notification</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="cities.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html> 

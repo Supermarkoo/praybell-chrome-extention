@@ -1,0 +1,124 @@
+{
+    "extensionName": {
+        "message": "بريبل - مواقيت الصلاة",
+        "description": "اسم الإضافة"
+    },
+    "extensionDescription": {
+        "message": "أذان. في الوقت. كل مرة.",
+        "description": "وصف الإضافة"
+    },
+    "prayerTimes": {
+        "message": "مواقيت الصلاة",
+        "description": "عنوان قسم مواقيت الصلاة"
+    },
+    "nextPrayer": {
+        "message": "الصلاة القادمة",
+        "description": "تسمية الصلاة القادمة"
+    },
+    "fajr": {
+        "message": "الفجر",
+        "description": "اسم صلاة الفجر"
+    },
+    "sunrise": {
+        "message": "الشروق",
+        "description": "وقت الشروق"
+    },
+    "dhuhr": {
+        "message": "الظهر",
+        "description": "اسم صلاة الظهر"
+    },
+    "asr": {
+        "message": "العصر",
+        "description": "اسم صلاة العصر"
+    },
+    "maghrib": {
+        "message": "المغرب",
+        "description": "اسم صلاة المغرب"
+    },
+    "isha": {
+        "message": "العشاء",
+        "description": "اسم صلاة العشاء"
+    },
+    "settings": {
+        "message": "الإعدادات",
+        "description": "عنوان الإعدادات"
+    },
+    "language": {
+        "message": "اللغة",
+        "description": "إعداد اللغة"
+    },
+    "calculationMethod": {
+        "message": "طريقة الحساب",
+        "description": "طريقة حساب مواقيت الصلاة"
+    },
+    "madhab": {
+        "message": "المذهب",
+        "description": "إعداد المذهب"
+    },
+    "timeFormat": {
+        "message": "تنسيق الوقت",
+        "description": "إعداد تنسيق الوقت"
+    },
+    "showHijri": {
+        "message": "إظهار التاريخ الهجري",
+        "description": "تبديل إظهار التاريخ الهجري"
+    },
+    "notifications": {
+        "message": "الإشعارات",
+        "description": "إعداد الإشعارات"
+    },
+    "autoLocation": {
+        "message": "تحديد الموقع تلقائياً",
+        "description": "إعداد الموقع التلقائي"
+    },
+    "manualLocation": {
+        "message": "الموقع اليدوي",
+        "description": "إعداد الموقع اليدوي"
+    },
+    "country": {
+        "message": "الدولة",
+        "description": "اختيار الدولة"
+    },
+    "city": {
+        "message": "المدينة",
+        "description": "اختيار المدينة"
+    },
+    "save": {
+        "message": "حفظ",
+        "description": "زر الحفظ"
+    },
+    "cancel": {
+        "message": "إلغاء",
+        "description": "زر الإلغاء"
+    },
+    "loading": {
+        "message": "جاري التحميل...",
+        "description": "رسالة التحميل"
+    },
+    "error": {
+        "message": "خطأ",
+        "description": "رسالة الخطأ"
+    },
+    "success": {
+        "message": "تم بنجاح",
+        "description": "رسالة النجاح"
+    },
+    "notificationTitle": {
+        "message": "وقت الصلاة",
+        "description": "عنوان الإشعار"
+    },
+    "notificationBody": {
+        "message": "حان وقت صلاة $PRAYER$. نسأل الله أن يبارك في $TIME$.",
+        "description": "محتوى الإشعار مع العناصر النائبة",
+        "placeholders": {
+            "prayer": {
+                "content": "$1",
+                "example": "المغرب"
+            },
+            "time": {
+                "content": "$2",
+                "example": "مسائك"
+            }
+        }
+    }
+} 

@@ -1,0 +1,379 @@
+/* Base styles */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2196F3;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    width: 350px;
+    min-height: 500px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    direction: rtl;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.location-info {
+    font-size: 14px;
+    color: #666;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.icon-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Next Prayer Box */
+.next-prayer-box {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.next-prayer-info {
+    margin-bottom: 10px;
+}
+
+#next-prayer-name {
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#next-prayer-time {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.countdown {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+
+/* Prayer Times List */
+.prayer-times {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prayer-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.prayer-time:hover {
+    background-color: #f0f0f0;
+    transform: translateX(-5px);
+}
+
+.prayer-name {
+    font-weight: 500;
+}
+
+.time {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+}
+
+/* Settings Page */
+.settings-page {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.settings-page.active {
+    transform: translateX(0);
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#settings-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#close-settings {
+    font-size: 24px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+#close-settings:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.settings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.settings-section label {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.select-box {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.select-box:hover {
+    border-color: var(--primary-color);
+}
+
+.select-box:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.location-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.location-button:hover {
+    background-color: #e9ecef;
+}
+
+.location-button .icon {
+    font-size: 18px;
+}
+
+.test-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.test-button:hover {
+    background-color: #45a049;
+}
+
+.test-button .icon {
+    font-size: 18px;
+}
+
+.test-button .text {
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.date-info {
+    margin-bottom: 10px;
+}
+
+.founder a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.founder a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.prayer-time {
+    animation: slideIn 0.3s ease forwards;
+}
+
+.next-prayer-box {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    body {
+        width: 100%;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    #title {
+        font-size: 20px;
+    }
+    
+    .countdown {
+        font-size: 28px;
+    }
+}
+
+/* RTL Support */
+[dir="rtl"] .prayer-time:hover {
+    transform: translateX(5px);
+}
+
+[dir="rtl"] .settings-page {
+    transform: translateX(-100%);
+}
+
+[dir="rtl"] .settings-page.active {
+    transform: translateX(0);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1a1a;
+        --text-color: #ffffff;
+    }
+    
+    .prayer-time {
+        background-color: #2d2d2d;
+    }
+    
+    .prayer-time:hover {
+        background-color: #333333;
+    }
+    
+    .select-box {
+        background-color: #2d2d2d;
+        color: white;
+        border-color: #404040;
+    }
+    
+    .location-button {
+        background-color: #2d2d2d;
+    }
+    
+    .location-button:hover {
+        background-color: #333333;
+    }
+
+    .settings-page {
+        background-color: var(--background-color);
+    }
+
+    .settings-header {
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+
+    #close-settings:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+} 

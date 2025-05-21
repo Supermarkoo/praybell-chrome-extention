@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PrayBell Settings</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+            background-color: var(--background-color);
+        }
+
+        .options-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .options-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .options-title {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .options-description {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .options-section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .options-section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .option-item {
+            margin-bottom: 15px;
+        }
+
+        .option-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .option-description {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: var(--primary-color);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+        }
+
+        .save-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            display: block;
+            margin: 20px auto;
+        }
+
+        .save-button:hover {
+            background-color: #45a049;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .options-section {
+                background-color: #2d2d2d;
+            }
+
+            .option-description {
+                color: #999;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="options-container">
+        <div class="options-header">
+            <h1 class="options-title">PrayBell Settings</h1>
+            <p class="options-description">Customize your prayer time experience</p>
+        </div>
+
+        <div class="options-section">
+            <h2 class="options-section-title">General Settings</h2>
+            <div class="options-grid">
+                <div class="option-item">
+                    <label class="option-label">Language</label>
+                    <select id="language-select" class="select-box">
+                        <option value="en">English</option>
+                        <option value="ar">العربية</option>
+                        <option value="fr">Français</option>
+                        <option value="fa">فارسی</option>
+                        <option value="lb">اللهجة اللبنانية</option>
+                    </select>
+                </div>
+
+                <div class="option-item">
+                    <label class="option-label">Time Format</label>
+                    <select id="time-format-select" class="select-box">
+                        <option value="24">24-hour</option>
+                        <option value="12">12-hour</option>
+                    </select>
+                </div>
+
+                <div class="option-item">
+                    <label class="option-label">Show Hijri Date</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="show-hijri-toggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <p class="option-description">Display the Hijri date alongside the Gregorian date</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="options-section">
+            <h2 class="options-section-title">Prayer Time Settings</h2>
+            <div class="options-grid">
+                <div class="option-item">
+                    <label class="option-label">Calculation Method</label>
+                    <select id="calculation-method-select" class="select-box">
+                        <option value="MWL">Muslim World League</option>
+                        <option value="ISNA">Islamic Society of North America</option>
+                        <option value="EGYPT">Egyptian General Authority</option>
+                        <option value="MAKKAH">Umm Al-Qura University</option>
+                        <option value="KARACHI">University of Islamic Sciences</option>
+                        <option value="TEHRAN">Institute of Geophysics</option>
+                        <option value="JAFARI">Shia Ithna-Ashari</option>
+                    </select>
+                    <p class="option-description">Select the method used to calculate prayer times</p>
+                </div>
+
+                <div class="option-item">
+                    <label class="option-label">Madhab</label>
+                    <select id="madhab-select" class="select-box">
+                        <option value="SHAFI">Shafi</option>
+                        <option value="HANAFI">Hanafi</option>
+                    </select>
+                    <p class="option-description">Select your madhab for Asr prayer time calculation</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="options-section">
+            <h2 class="options-section-title">Notification Settings</h2>
+            <div class="options-grid">
+                <div class="option-item">
+                    <label class="option-label">Enable Notifications</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="notifications-toggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <p class="option-description">Receive notifications for prayer times</p>
+                </div>
+
+                <div class="option-item">
+                    <label class="option-label">Notification Sound</label>
+                    <select id="notification-sound-select" class="select-box">
+                        <option value="adhan">Adhan</option>
+                        <option value="bell">Bell</option>
+                        <option value="none">None</option>
+                    </select>
+                    <p class="option-description">Choose the sound for prayer time notifications</p>
+                </div>
+
+                <div class="option-item">
+                    <label class="option-label">Notification Time</label>
+                    <select id="notification-time-select" class="select-box">
+                        <option value="0">At prayer time</option>
+                        <option value="5">5 minutes before</option>
+                        <option value="10">10 minutes before</option>
+                        <option value="15">15 minutes before</option>
+                    </select>
+                    <p class="option-description">When to receive prayer time notifications</p>
+                </div>
+            </div>
+        </div>
+
+        <button id="save-settings" class="save-button">Save Settings</button>
+    </div>
+
+    <script src="utils/prayerTimes.js" type="module"></script>
+    <script src="utils/location.js" type="module"></script>
+    <script src="utils/hijri.js" type="module"></script>
+    <script src="options.js" type="module"></script>
+</body>
+</html> 

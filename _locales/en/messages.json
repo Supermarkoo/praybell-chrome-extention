@@ -1,0 +1,124 @@
+{
+    "extensionName": {
+        "message": "PrayBell - Prayer Times",
+        "description": "The name of the extension"
+    },
+    "extensionDescription": {
+        "message": "Adhan. On time. Every time.",
+        "description": "The description of the extension"
+    },
+    "prayerTimes": {
+        "message": "Prayer Times",
+        "description": "Title for prayer times section"
+    },
+    "nextPrayer": {
+        "message": "Next Prayer",
+        "description": "Label for next prayer"
+    },
+    "fajr": {
+        "message": "Fajr",
+        "description": "Fajr prayer name"
+    },
+    "sunrise": {
+        "message": "Sunrise",
+        "description": "Sunrise time"
+    },
+    "dhuhr": {
+        "message": "Dhuhr",
+        "description": "Dhuhr prayer name"
+    },
+    "asr": {
+        "message": "Asr",
+        "description": "Asr prayer name"
+    },
+    "maghrib": {
+        "message": "Maghrib",
+        "description": "Maghrib prayer name"
+    },
+    "isha": {
+        "message": "Isha",
+        "description": "Isha prayer name"
+    },
+    "settings": {
+        "message": "Settings",
+        "description": "Settings title"
+    },
+    "language": {
+        "message": "Language",
+        "description": "Language setting"
+    },
+    "calculationMethod": {
+        "message": "Calculation Method",
+        "description": "Prayer time calculation method"
+    },
+    "madhab": {
+        "message": "Madhab",
+        "description": "Madhab setting"
+    },
+    "timeFormat": {
+        "message": "Time Format",
+        "description": "Time format setting"
+    },
+    "showHijri": {
+        "message": "Show Hijri Date",
+        "description": "Toggle for showing Hijri date"
+    },
+    "notifications": {
+        "message": "Notifications",
+        "description": "Notifications setting"
+    },
+    "autoLocation": {
+        "message": "Auto-detect location",
+        "description": "Auto location setting"
+    },
+    "manualLocation": {
+        "message": "Manual Location",
+        "description": "Manual location setting"
+    },
+    "country": {
+        "message": "Country",
+        "description": "Country selection"
+    },
+    "city": {
+        "message": "City",
+        "description": "City selection"
+    },
+    "save": {
+        "message": "Save",
+        "description": "Save button"
+    },
+    "cancel": {
+        "message": "Cancel",
+        "description": "Cancel button"
+    },
+    "loading": {
+        "message": "Loading...",
+        "description": "Loading message"
+    },
+    "error": {
+        "message": "Error",
+        "description": "Error message"
+    },
+    "success": {
+        "message": "Success",
+        "description": "Success message"
+    },
+    "notificationTitle": {
+        "message": "Prayer Time",
+        "description": "Notification title"
+    },
+    "notificationBody": {
+        "message": "Time for $PRAYER$ prayer. May your $TIME$ be peaceful.",
+        "description": "Notification body with placeholders",
+        "placeholders": {
+            "prayer": {
+                "content": "$1",
+                "example": "Maghrib"
+            },
+            "time": {
+                "content": "$2",
+                "example": "evening"
+            }
+        }
+    }
+} 
